@@ -10,7 +10,7 @@ const Footer = ({isHomePage}) => {
             <div className="container">
                 <div className={`footer__block flex ${footerStyle}`}>
                     <div className="creator">
-                        <a className="creator__link flex" target="_blank" rel="noopener noreferrer" href='https://github.com/AntonLav'>
+                        <a className="creator__link flex" target="_blank" rel="noopener noreferrer" href='https://github.com/antonlavrinov'>
                             <FontAwesomeIcon icon={faGithub} size="2x"/>
                             <div className="creator__name">
                                 <span className="creator__small-font">Created by</span> <br/>Anton Lavrinov

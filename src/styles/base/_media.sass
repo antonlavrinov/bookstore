@@ -28,11 +28,16 @@
     //     width: 50%
     //     &__block
     //         width: 20px
+    .book-item
+        &__block
+            height: 250px
+        &__image
+            height: 250px
 
 
-@media (max-width: 767px)
+@media (max-width: 768px)
     .logo
-        margin: 20px 0 30px
+        margin: 20px 0 50px
     .header
         &__menu
             width: 100%
@@ -67,46 +72,105 @@
         // background: green
         width: 575px
     .search-page
+        padding-top: 20px
         &__booklist
             grid-template-columns: repeat(auto-fill, minmax(2fr, 1fr)) 
+    .book-item-popup
+        &__info
+            width: 100%
+        &__window
+            &-block
+                flex-direction: column
+    .book-item
+        &__block
+            height: 250px
+        &__image
+            height: 250px
 
 
-@media (max-width: 575px)
+@media only screen and (max-width: 575px)
+
+    .book-item-popup
+        &__image
+            width: 100px
+        &__info
+            width: 100%
+        &__window
+            position: fixed
+            width: 100px
+            top: 0
+
+            &-block
+                flex-direction: column
     .container
         padding: 15px
         width: 100%
     .search-page
         // background: blue
         &__booklist
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) 
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) 
     .book-item
         &__block
-            height: 350px
+            height: 200px
         &__image
-            height: 350px
+            height: 200px
  
 
 
-@media (max-width: 480px)
+@media only screen and (max-width: 480px)
+    .footer
+        &__block
+            // padding: 15px
+
+            width: 100%
     .container
         padding: 0 15px 
         width: 100%
         // background: white
     .search-page
-
+        padding-bottom: 230px
         &__booklist
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) 
     .book-item
         &__block
-            height: 270px
+            height: 230px
         &__image
-            height: 270px
+            height: 230px
     .offer
-        padding-bottom: 200px
+        padding-bottom: 250px
+        &__block
+            height: 600px !important
+    .search-field
+        &__input
+            height: 60px
+            &_top
+                height: 50px
+        &__title
+            font-size: 33px
+            padding-top: 190px
+    .button
+        &_offer
+            height: 60px
+            padding-top: 18px
+        &_top
+            top: 0
+            padding: 0
+            height: 100%
+
     .footer
         &__block
             flex-direction: column
-            padding: 20px 0
-            height: 200px
+            padding: 20px 0 40px
+            height: 230px
         
 
+@media only screen and (max-width: 362px)
+    .search-page
+        padding-bottom: 230px
+        &__booklist
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) 
+    .book-item
+        &__block
+            height: 200px
+        &__image
+            height: 200px
