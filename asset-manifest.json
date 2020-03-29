@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bookstore/static/css/main.3f42af50.chunk.css",
+    "main.css": "/bookstore/static/css/main.86c007b3.chunk.css",
     "main.js": "/bookstore/static/js/main.e67447bc.chunk.js",
     "main.js.map": "/bookstore/static/js/main.e67447bc.chunk.js.map",
     "runtime-main.js": "/bookstore/static/js/runtime-main.d475adb8.js",
@@ -8,9 +8,9 @@
     "static/js/2.941a02b4.chunk.js": "/bookstore/static/js/2.941a02b4.chunk.js",
     "static/js/2.941a02b4.chunk.js.map": "/bookstore/static/js/2.941a02b4.chunk.js.map",
     "index.html": "/bookstore/index.html",
-    "precache-manifest.a54e104d8dbba4502a73a8a54e72ae93.js": "/bookstore/precache-manifest.a54e104d8dbba4502a73a8a54e72ae93.js",
+    "precache-manifest.2309f5ed7c32a5343fde51b0bbb638dd.js": "/bookstore/precache-manifest.2309f5ed7c32a5343fde51b0bbb638dd.js",
     "service-worker.js": "/bookstore/service-worker.js",
-    "static/css/main.3f42af50.chunk.css.map": "/bookstore/static/css/main.3f42af50.chunk.css.map",
+    "static/css/main.86c007b3.chunk.css.map": "/bookstore/static/css/main.86c007b3.chunk.css.map",
     "static/js/2.941a02b4.chunk.js.LICENSE.txt": "/bookstore/static/js/2.941a02b4.chunk.js.LICENSE.txt",
     "static/media/App.sass": "/bookstore/static/media/MuseoSansCyrl-700.fe82597d.svg",
     "static/media/book_offer3.png": "/bookstore/static/media/book_offer3.7904b702.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.d475adb8.js",
     "static/js/2.941a02b4.chunk.js",
-    "static/css/main.3f42af50.chunk.css",
+    "static/css/main.86c007b3.chunk.css",
     "static/js/main.e67447bc.chunk.js"
   ]
 }
