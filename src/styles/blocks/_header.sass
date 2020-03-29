@@ -1,0 +1,42 @@
+.header
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 2
+    color: white
+    &_searchpage
+        color: $dark-blue
+    
+
+    // transform: translateX(50%)
+    &__block
+        // position: absolute
+        // position: fixed
+        padding: 30px 0
+        display: flex
+        justify-content: space-between
+        background: none
+        align-items: center
+
+    &__menu
+        align-items: center
+        &-link
+            color: inherit
+
+        &-list
+            margin-left: 20px
+            display: flex
+            font-size: 18px
+        &-item
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+                
+    &_top
+        // background: $background-secondary-color
+        position: relative
+
+.logo
+    &__icon
+        svg
+            height: 23px
