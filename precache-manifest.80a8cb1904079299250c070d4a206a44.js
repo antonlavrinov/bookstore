@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ff4948776157e5a207d147fce30dd63",
+    "revision": "1b792f1df2efb8f9081ea5bcbe502dd9",
     "url": "/bookstore/index.html"
   },
   {
-    "revision": "dbc5099653c59e938d56",
-    "url": "/bookstore/static/css/main.61750828.chunk.css"
+    "revision": "f5dc4bd53988fe37c217",
+    "url": "/bookstore/static/css/main.52f96c73.chunk.css"
   },
   {
     "revision": "2c78b408379215899fe9",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bookstore/static/js/2.941a02b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dbc5099653c59e938d56",
-    "url": "/bookstore/static/js/main.e9bc81b6.chunk.js"
+    "revision": "f5dc4bd53988fe37c217",
+    "url": "/bookstore/static/js/main.13cd7b73.chunk.js"
   },
   {
     "revision": "085fa06d3b1b7ada148a",
@@ -124,8 +124,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bookstore/static/media/MuseoSansCyrl-700.fe82597d.svg"
   },
   {
-    "revision": "7904b702a47dcaa2037e8f551a88a4af",
-    "url": "/bookstore/static/media/book_offer3.7904b702.png"
+    "revision": "cfcd3caf031c85a41b7c4320e67fdf56",
+    "url": "/bookstore/static/media/book_offer3-min.cfcd3caf.png"
   },
   {
     "revision": "ea9415cfac0a6c7a3bfc0849d7003b09",
