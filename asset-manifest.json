@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/bookstore/book/static/css/main.510aa1c1.chunk.css",
-    "main.js": "/bookstore/book/static/js/main.13cd7b73.chunk.js",
-    "main.js.map": "/bookstore/book/static/js/main.13cd7b73.chunk.js.map",
-    "runtime-main.js": "/bookstore/book/static/js/runtime-main.f1e59eb9.js",
-    "runtime-main.js.map": "/bookstore/book/static/js/runtime-main.f1e59eb9.js.map",
-    "static/js/2.941a02b4.chunk.js": "/bookstore/book/static/js/2.941a02b4.chunk.js",
-    "static/js/2.941a02b4.chunk.js.map": "/bookstore/book/static/js/2.941a02b4.chunk.js.map",
-    "index.html": "/bookstore/book/index.html",
-    "precache-manifest.d681986b3a1c75e15ee40984bc7e7b12.js": "/bookstore/book/precache-manifest.d681986b3a1c75e15ee40984bc7e7b12.js",
-    "service-worker.js": "/bookstore/book/service-worker.js",
-    "static/css/main.510aa1c1.chunk.css.map": "/bookstore/book/static/css/main.510aa1c1.chunk.css.map",
-    "static/js/2.941a02b4.chunk.js.LICENSE.txt": "/bookstore/book/static/js/2.941a02b4.chunk.js.LICENSE.txt",
-    "static/media/App.sass": "/bookstore/book/static/media/MuseoSansCyrl-700.fe82597d.svg",
-    "static/media/book_offer3-min.png": "/bookstore/book/static/media/book_offer3-min.cfcd3caf.png",
-    "static/media/no_cov.jpeg": "/bookstore/book/static/media/no_cov.ea9415cf.jpeg"
+    "main.css": "/bookstore/static/css/main.52f96c73.chunk.css",
+    "main.js": "/bookstore/static/js/main.13cd7b73.chunk.js",
+    "main.js.map": "/bookstore/static/js/main.13cd7b73.chunk.js.map",
+    "runtime-main.js": "/bookstore/static/js/runtime-main.d475adb8.js",
+    "runtime-main.js.map": "/bookstore/static/js/runtime-main.d475adb8.js.map",
+    "static/js/2.941a02b4.chunk.js": "/bookstore/static/js/2.941a02b4.chunk.js",
+    "static/js/2.941a02b4.chunk.js.map": "/bookstore/static/js/2.941a02b4.chunk.js.map",
+    "index.html": "/bookstore/index.html",
+    "precache-manifest.80a8cb1904079299250c070d4a206a44.js": "/bookstore/precache-manifest.80a8cb1904079299250c070d4a206a44.js",
+    "service-worker.js": "/bookstore/service-worker.js",
+    "static/css/main.52f96c73.chunk.css.map": "/bookstore/static/css/main.52f96c73.chunk.css.map",
+    "static/js/2.941a02b4.chunk.js.LICENSE.txt": "/bookstore/static/js/2.941a02b4.chunk.js.LICENSE.txt",
+    "static/media/App.sass": "/bookstore/static/media/MuseoSansCyrl-700.fe82597d.svg",
+    "static/media/book_offer3-min.png": "/bookstore/static/media/book_offer3-min.cfcd3caf.png",
+    "static/media/no_cov.jpeg": "/bookstore/static/media/no_cov.ea9415cf.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f1e59eb9.js",
+    "static/js/runtime-main.d475adb8.js",
     "static/js/2.941a02b4.chunk.js",
-    "static/css/main.510aa1c1.chunk.css",
+    "static/css/main.52f96c73.chunk.css",
     "static/js/main.13cd7b73.chunk.js"
   ]
 }
