@@ -13,7 +13,6 @@ export default class BookService {
 
     getAllBooks = async (url) => {
         const res = await this.getResource(url);
-        // console.log(res)
         return res;
     }
 }

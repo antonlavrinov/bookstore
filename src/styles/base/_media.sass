@@ -1,41 +1,57 @@
 @media screen and (max-width: 1200px)
     .container
-        width: 850px 
+        width: 850px
     .search-page
-        // background: blue
         &__booklist
-            // grid-gap: 10px
             display: grid
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) 
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+    .book-item-popup
+        &__info
+            width: 400px
 
+//IPAD PRO 1024px
 
+@media screen and (max-width: 991px)
 
-    
-@media screen and (max-width: 991px) 
+    .book-item-popup
+        &__info
+            width: 400px
+        &__image
+            width: 200px
+            height: 300px
     .container
-        // background: red
         width: 750px
         height: 100%
     .search-page
         &__booklist
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) 
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
             display: grid
             grid-gap: 15px
-            // grid-template-columns: repeat(auto-fill, minmax(50px, 100px))
-            // div
-            //     width: 50px
-    // .book-item
-    //     width: 50%
-    //     &__block
-    //         width: 20px
+
     .book-item
         &__block
             height: 250px
         &__image
             height: 250px
 
-
+//IPAD
 @media (max-width: 768px)
+
+    .book-item-popup
+        &__window
+            margin-top: -150px
+        &__title
+            font-size: 20px
+        &__author
+            font-size: 16px
+        &__descr
+            font-size: 14px
+        &__info
+            width: 280px
+        &__image
+            margin: 0 20px 20px 0
+            width: 200px
+            height: 270px
     .logo
         margin: 20px 0 50px
     .header
@@ -62,75 +78,85 @@
             width: 100%
             &_top
                 height: 50px
-                // width: 100% 
+
     .button
         &_top
             top: 7px
 
-
     .container
-        // background: green
         width: 575px
     .search-page
         padding-top: 20px
         &__booklist
-            grid-template-columns: repeat(auto-fill, minmax(2fr, 1fr)) 
-    .book-item-popup
-        &__info
-            width: 100%
-        &__window
-            &-block
-                flex-direction: column
+            grid-template-columns: repeat(auto-fill, minmax(2fr, 1fr))
+
     .book-item
         &__block
             height: 250px
         &__image
             height: 250px
 
-
 @media only screen and (max-width: 575px)
 
     .book-item-popup
-        &__image
-            width: 100px
+        &__title
+            font-size: 18px
+        &__author
+            font-size: 15px
+        &__descr
+            font-size: 15px
+
         &__info
             width: 100%
+        &__image
+            margin: 0 20px 20px 0
+            width: 200px
+            height: 300px
         &__window
-            position: fixed
-            width: 100px
-            top: 0
-
+            padding: 18px
+            margin-top: -190px
+            position: static
+            right: 20px
+            transform: translateX(0)
+            width: 100%
             &-block
+                width: 100%
                 flex-direction: column
     .container
         padding: 15px
         width: 100%
     .search-page
-        // background: blue
         &__booklist
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) 
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
     .book-item
+        &__title
+            font-size: 15px
+        &__authors
+            font-size: 14px
         &__block
             height: 200px
         &__image
             height: 200px
- 
 
-
+//IPHONE_X IPHONE_6/7/8 PLUS  
 @media only screen and (max-width: 480px)
+    .button
+        &_close-popup
+            top: -45px
+            right: 0
+            svg
+                height: 50px
+                color: $blue
     .footer
         &__block
-            // padding: 15px
-
             width: 100%
     .container
-        padding: 0 15px 
+        padding: 0 15px
         width: 100%
-        // background: white
     .search-page
         padding-bottom: 230px
         &__booklist
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) 
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
     .book-item
         &__block
             height: 230px
@@ -162,15 +188,31 @@
             flex-direction: column
             padding: 20px 0 40px
             height: 230px
-        
 
+//IPHONE_5S/SE   GALAXY_S5
 @media only screen and (max-width: 362px)
     .search-page
         padding-bottom: 230px
         &__booklist
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) 
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
     .book-item
         &__block
             height: 200px
         &__image
             height: 200px
+    .book-item-popup
+        &__info
+            width: 100%
+        &__image
+            margin: 0 20px 20px 0
+            width: 100%
+            height: 300px
+        &__window
+
+            position: static
+            right: 20px
+            transform: translateX(0)
+            width: 100%
+            &-block
+                width: 100%
+                flex-direction: column

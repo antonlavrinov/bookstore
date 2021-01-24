@@ -3,10 +3,10 @@ import {Switch, Route, withRouter, Redirect} from 'react-router-dom';
 import './styles/App.sass';
 
 import BookService from './services/bookservice';
-import Header from './components//header/header.component';
-import Footer from './components/footer/footer.component';
-import HomePage from './pages/home-page/home-page.component';
-import SearchPage from './pages/search-page/search-page.component';
+import Header from './components/header.component';
+import Footer from './components/footer.component';
+import HomePage from './pages/home-page.component';
+import SearchPage from './pages/search-page.component';
 
 
 class App extends React.Component {
@@ -33,7 +33,6 @@ class App extends React.Component {
     this.bookService.getAllBooks(bookToGet)
      .then((books) => {
        this.setState({books: books.items});
-      //  console.log(this.state.books);
        this.setState({loading: false});
      });
   }

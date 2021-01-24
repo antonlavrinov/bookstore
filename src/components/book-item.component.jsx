@@ -1,6 +1,6 @@
 import React from 'react';
-import noCover from '../../img/no_cov.jpeg';
-import BookItemPopup from '../book-item-popup/book-item-popup';
+import noCover from '../img/no_cov.jpeg';
+import BookItemPopup from './book-item-popup';
 
 class BookItem extends React.Component {
 
@@ -11,25 +11,25 @@ class BookItem extends React.Component {
     }
 
     clickPopup = () => {
-        this.setState({clicked: !this.state.clicked});
+        this.setState({ clicked: !this.state.clicked });
     }
-    
+
     componentWillUnmount() {
-        this.setState({imageLoad: false})
+        this.setState({ imageLoad: false })
     }
 
 
     getRating = () => {
-        const {book} = this.props;
+        const { book } = this.props;
         if (typeof book.volumeInfo.averageRating == 'undefined') {
             return 0;
         } else {
             return book.volumeInfo.averageRating;
         }
     }
-    
+
     getDescription = () => {
-        const {book} = this.props;
+        const { book } = this.props;
         if (typeof book.volumeInfo.description == 'undefined') {
             return;
         } else {
@@ -38,10 +38,10 @@ class BookItem extends React.Component {
     }
 
     getTitle = (size) => {
-        const {book} = this.props;
+        const { book } = this.props;
         if (typeof book.volumeInfo.title == 'undefined') {
             return '';
-        }else if (size === 'long') {
+        } else if (size === 'long') {
             return book.volumeInfo.title;
         } else {
             const subtractTitle = 50;
@@ -51,11 +51,11 @@ class BookItem extends React.Component {
     }
 
     getAuthor = (size) => {
-        const {book} = this.props;
+        const { book } = this.props;
         if (typeof book.volumeInfo.authors == 'undefined') {
             return '';
-        }else if (size === 'long') {
-            return book.volumeInfo.authors;        
+        } else if (size === 'long') {
+            return book.volumeInfo.authors;
         } else {
             const subtractAuthor = 50;
             const subtractedAuthor = (book.volumeInfo.authors.join().length > subtractAuthor) ? book.volumeInfo.authors.join().substring(0, subtractAuthor) + '...' : book.volumeInfo.authors.join();
@@ -64,17 +64,19 @@ class BookItem extends React.Component {
     }
 
     getImage = () => {
-        const {book} = this.props;
- 
+        const { book } = this.props;
         if (typeof book.volumeInfo.imageLinks == 'undefined') {
             return noCover;
         } else {
-            return book.volumeInfo.imageLinks.thumbnail;
+            const imageUrl = book.volumeInfo.imageLinks.thumbnail;
+            const httpAfter = imageUrl.slice(4)
+            console.log('ddf')
+            return 'https' + httpAfter;
         }
     }
 
     getLink = () => {
-        const {book} = this.props;
+        const { book } = this.props;
         if (typeof book.volumeInfo.previewLink == 'undefined') {
             return '';
         } else {
@@ -82,27 +84,37 @@ class BookItem extends React.Component {
         }
     }
 
-    render() {
-        const bookActive = this.state.imageLoad ? 'book-item_active' : '';
+    createImage = () => {
         let imgBkg = new Image();
         imgBkg.src = this.getImage();
-        imgBkg.onload = () => this.state.imageLoad ? null : this.setState({imageLoad: true});
+        imgBkg.onload = () => this.state.imageLoad ? null : this.setState({ imageLoad: true });
+        return imgBkg.src;
+    }
+
+
+    render() {
+        const popup = this.state.clicked ? <BookItemPopup getRating={this.getRating} clicked={this.state.clicked} getImage={this.getImage} getAuthor={this.getAuthor} getTitle={this.getTitle} clickPopup={this.clickPopup} getDescription={this.getDescription} getLink={this.getLink} /> : null;
+        const bookActive = this.state.imageLoad ? 'book-item_active' : '';
+        const imggg = this.createImage();
         return (
             <React.Fragment>
-                    <div className={`book-item ${bookActive}`} onClick={this.clickPopup} >
-                        <div className="book-item__block">
-                            <div className="book-item__image" style={{
-                                backgroundImage: `url('${imgBkg.src}')`,
+                <div className={`book-item ${bookActive}`} onClick={this.clickPopup} >
+                    <div className="book-item__block">
+                        <div
+                            className="book-item__image"
+                            style={{
+                                backgroundImage: `url('${imggg}')`,
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat'  
-                                }} >  
-                            </div>
+                                backgroundRepeat: 'no-repeat'
+                            }} >
                         </div>
-                        <div className="book-item__title">{this.getTitle()}</div>
-                        <div className="book-item__authors">{this.getAuthor()}</div>
                     </div>
-                        <BookItemPopup getRating={this.getRating} clicked={this.state.clicked} getImage={this.getImage} getAuthor={this.getAuthor} getTitle={this.getTitle} clickPopup={this.clickPopup} getDescription={this.getDescription} getLink={this.getLink}/>
+                    <div className="book-item__title">{this.getTitle()}</div>
+                    <div className="book-item__authors">{this.getAuthor()}</div>
+                </div>
+
+                {popup}
             </React.Fragment>
         )
     }

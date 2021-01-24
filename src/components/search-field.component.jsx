@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,8 +11,8 @@ class SearchField extends React.Component {
     }
 
     handleChange = (e) => {
-        this.setState({field: e.target.value})
-      }
+        this.setState({ field: e.target.value })
+    }
 
     onSearchSubmit = (e) => {
 
@@ -20,24 +20,24 @@ class SearchField extends React.Component {
             e.preventDefault();
         } else {
             e.preventDefault();
-            const {bookLoad, history} = this.props;
+            const { bookLoad, history } = this.props;
             history.push(`books`);
             bookLoad(this.state.field);
-            this.setState({field: ''});
+            this.setState({ field: '' });
         }
     }
 
-    render() { 
-        const {isHomePage} = this.props;
+    render() {
+        const { isHomePage } = this.props;
         const searchFieldGlass = isHomePage ? '' : 'button_top';
         const classsInput = isHomePage ? '' : 'search-field__input_top';
 
         return (
-            <div className={`search-field flex`}>                
+            <div className={`search-field flex`}>
                 <form className='search-field__form' method='post' onSubmit={this.onSearchSubmit}>
-                    <input value={this.state.field} autoComplete='off' placeholder="Type here..." onChange={this.handleChange} className={`search-field__input ${classsInput}`}  name='inputt'/>
+                    <input value={this.state.field} autoComplete='off' placeholder="Type here..." onChange={this.handleChange} className={`search-field__input ${classsInput}`} name='inputt' />
                     <button className={`button button_offer ${searchFieldGlass}`} type='submit'>
-                        <FontAwesomeIcon icon={faSearch}/>
+                        <FontAwesomeIcon icon={faSearch} />
                     </button>
                 </form>
             </div>
